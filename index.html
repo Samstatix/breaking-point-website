@@ -1,187 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Breaking Point — a dark fantasy roguelike RPG in development." />
+  <meta
+    name="description"
+    content="Breaking Point — a dark fantasy roguelike RPG in development."
+  />
+
   <title>Breaking Point</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
   <canvas id="embers" aria-hidden="true"></canvas>
 
+
+  <!-- =====================================
+       HEADER
+  ====================================== -->
+
   <header class="site-header">
+
     <a href="#game" class="brand" aria-label="Breaking Point home">
-      <div class="logo-placeholder small">LOGO</div>
+
+      <img
+        src="assets/images/logo.jfif"
+        alt="Breaking Point logo"
+        class="site-logo"
+      />
+
       <span>BREAKING POINT</span>
+
     </a>
 
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
 
     <nav class="site-nav" aria-label="Primary navigation">
+
       <a href="#game">GAME</a>
+
       <a href="#tower">THE TOWER</a>
+
       <a href="#development">DEVELOPMENT</a>
+
       <a href="#support">SUPPORT</a>
+
       <a href="#playtest">PLAYTEST</a>
+
     </nav>
+
   </header>
 
+
+
   <main>
-    <section id="game" class="hero section dark-section">
-      <div class="hero-bg image-placeholder">
-        <span>HERO / MAIN TOWER IMAGE</span>
-      </div>
+
+
+    <!-- =====================================
+         GAME / HERO
+    ====================================== -->
+
+    <section
+      id="game"
+      class="hero section dark-section"
+    >
+
+      <div class="hero-bg"></div>
+
       <div class="hero-overlay"></div>
+
       <div class="fog fog-a"></div>
       <div class="fog fog-b"></div>
 
+
       <div class="hero-content reveal">
-        <p class="eyebrow">A DARK FANTASY ROGUELIKE RPG</p>
-        <h1>BREAKING<br />POINT</h1>
-        <p class="hero-copy">How far can you climb before you break?</p>
+
+        <p class="eyebrow">
+          A DARK FANTASY ROGUELIKE RPG
+        </p>
+
+
+        <h1>
+          BREAKING<br />
+          POINT
+        </h1>
+
+
+        <p class="hero-copy">
+          How far can you climb before you break?
+        </p>
+
+
         <div class="hero-actions">
-          <a class="btn primary" href="#tower">Explore the Tower</a>
-          <a class="btn ghost" href="#playtest">Join Development</a>
+
+          <a
+            class="btn primary"
+            href="#tower"
+          >
+            Explore the Tower
+          </a>
+
+
+          <a
+            class="btn ghost"
+            href="#playtest"
+          >
+            Join Development
+          </a>
+
         </div>
+
       </div>
 
-      <div class="scroll-hint">SCROLL TO ASCEND</div>
+
+      <div class="scroll-hint">
+        SCROLL TO ASCEND
+      </div>
+
     </section>
 
-    <section id="tower" class="section tower-section">
-      <div class="section-media image-placeholder reveal">
-        <span>TOWER SCALE / EXTERIOR IMAGE</span>
+
+
+    <!-- =====================================
+         THE TOWER
+    ====================================== -->
+
+    <section
+      id="tower"
+      class="section tower-section"
+    >
+
+      <div class="tower-image reveal">
+
+        <img
+          src="assets/images/tower-exterior.jfif"
+          alt="The enormous tower of Breaking Point"
+        />
+
       </div>
+
 
       <div class="tower-copy">
-        <p class="eyebrow reveal">THE TOWER</p>
-        <h2 class="reveal">Nobody knows what waits at the top.</h2>
+
+        <p class="eyebrow reveal">
+          THE TOWER
+        </p>
+
+
+        <h2 class="reveal">
+          Nobody knows what waits at the top.
+        </h2>
+
+
         <div class="tower-lines">
-          <p class="reveal">Every climb changes.</p>
-          <p class="reveal">Every decision follows you.</p>
-          <p class="reveal">Every loss remains.</p>
-          <p class="reveal">And the Tower keeps going.</p>
+
+          <p class="reveal">
+            Every climb changes.
+          </p>
+
+          <p class="reveal">
+            Every decision follows you.
+          </p>
+
+          <p class="reveal">
+            Every loss remains.
+          </p>
+
+          <p class="reveal">
+            And the Tower keeps going.
+          </p>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section sigil-break dark-section">
-      <div class="sigil-placeholder reveal">OFFICIAL SIGIL / TOWER SILHOUETTE</div>
+
+
+    <!-- =====================================
+         TOWER TRANSITION / SIGIL
+    ====================================== -->
+
+    <section
+      class="section sigil-break dark-section"
+    >
+
+      <div class="sigil-image reveal">
+
+        <img
+          src="assets/images/tower-silhouette.jfif"
+          alt="Silhouette of the Breaking Point tower"
+        />
+
+      </div>
+
+
       <div class="break-title reveal">
-        <span>THE ASCENT IS NEVER THE SAME</span>
-        <h2>BREAKING POINT</h2>
+
+        <span>
+          THE ASCENT IS NEVER THE SAME
+        </span>
+
+
+        <h2>
+          BREAKING POINT
+        </h2>
+
       </div>
+
     </section>
 
-    <section id="development" class="section development-section">
+
+
+    <!-- =====================================
+         DEVELOPMENT
+    ====================================== -->
+
+    <section
+      id="development"
+      class="section development-section"
+    >
+
       <div class="section-heading reveal">
-        <p class="eyebrow">BEHIND THE TOWER</p>
-        <h2>Development</h2>
-        <p>Follow the game as it grows from prototype to playable world.</p>
+
+        <p class="eyebrow">
+          BEHIND THE TOWER
+        </p>
+
+
+        <h2>
+          Development
+        </h2>
+
+
+        <p>
+          Follow Breaking Point as it grows from
+          prototype to a playable world.
+        </p>
+
       </div>
+
 
       <div class="dev-grid">
+
+
         <article class="dev-feature reveal">
-          <div class="image-placeholder dev-image"><span>TRAINING GROUND IMAGE</span></div>
-          <div class="dev-copy">
-            <span class="status">IN DEVELOPMENT</span>
-            <h3>Training Grounds</h3>
-            <p>A dedicated space for combat practice, equipment testing, and progression systems.</p>
+
+
+          <div class="dev-image">
+
+            <!--
+              Add training-ground.jfif later.
+
+              When you add it to assets/images,
+              replace the temporary content below
+              with:
+
+              <img
+                src="assets/images/training-ground.jfif"
+                alt="Breaking Point training ground"
+              />
+            -->
+
+            <div class="training-placeholder">
+
+              <span>
+                TRAINING GROUND
+              </span>
+
+              <small>
+                Image coming soon
+              </small>
+
+            </div>
+
           </div>
+
+
+          <div class="dev-copy">
+
+            <span class="status">
+              IN DEVELOPMENT
+            </span>
+
+
+            <h3>
+              Training Grounds
+            </h3>
+
+
+            <p>
+              A dedicated space for combat practice,
+              equipment testing, and progression systems.
+            </p>
+
+          </div>
+
         </article>
 
+
+
         <div class="milestones reveal">
-          <div class="milestone done"><span>MAIN MENU</span><strong>COMPLETE</strong></div>
-          <div class="milestone done"><span>LOADING SYSTEM</span><strong>COMPLETE</strong></div>
-          <div class="milestone active"><span>LOBBY</span><strong>IN DEVELOPMENT</strong></div>
-          <div class="milestone"><span>TRAINING SYSTEM</span><strong>PROTOTYPE</strong></div>
-          <div class="milestone"><span>COMBAT</span><strong>PLANNED</strong></div>
+
+
+          <div class="milestone done">
+
+            <span>
+              MAIN MENU
+            </span>
+
+            <strong>
+              COMPLETE
+            </strong>
+
+          </div>
+
+
+          <div class="milestone done">
+
+            <span>
+              LOADING SYSTEM
+            </span>
+
+            <strong>
+              COMPLETE
+            </strong>
+
+          </div>
+
+
+          <div class="milestone active">
+
+            <span>
+              LOBBY
+            </span>
+
+            <strong>
+              IN DEVELOPMENT
+            </strong>
+
+          </div>
+
+
+          <div class="milestone">
+
+            <span>
+              TRAINING SYSTEM
+            </span>
+
+            <strong>
+              PROTOTYPE
+            </strong>
+
+          </div>
+
+
+          <div class="milestone">
+
+            <span>
+              COMBAT
+            </span>
+
+            <strong>
+              PLANNED
+            </strong>
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="support" class="section support-section dark-section">
+
+
+    <!-- =====================================
+         SUPPORT
+    ====================================== -->
+
+    <section
+      id="support"
+      class="section support-section dark-section"
+    >
+
       <div class="support-inner reveal">
-        <div class="logo-placeholder medium">LOGO</div>
-        <p class="eyebrow">SUPPORT THE PROJECT</p>
-        <h2>Keep the Tower standing.</h2>
-        <p>Breaking Point is being developed independently. Support helps fund assets, music, software, testing, and continued development.</p>
-        <a class="btn primary disabled" href="#" aria-disabled="true" tabindex="-1">Support Link Coming Soon</a>
+
+
+        <img
+          src="assets/images/logo.jfif"
+          alt="Breaking Point emblem"
+          class="support-logo"
+        />
+
+
+        <p class="eyebrow">
+          SUPPORT THE PROJECT
+        </p>
+
+
+        <h2>
+          Keep the Tower standing.
+        </h2>
+
+
+        <p>
+          Breaking Point is being developed independently.
+          Support helps fund assets, music, software,
+          testing, and continued development.
+        </p>
+
+
+        <a
+          class="btn primary disabled"
+          href="#"
+          aria-disabled="true"
+          tabindex="-1"
+        >
+          Support Link Coming Soon
+        </a>
+
+
         <div class="support-tags">
-          <span>Assets</span><span>Music</span><span>Software</span><span>Testing</span><span>Development</span>
+
+          <span>
+            Assets
+          </span>
+
+          <span>
+            Music
+          </span>
+
+          <span>
+            Software
+          </span>
+
+          <span>
+            Testing
+          </span>
+
+          <span>
+            Development
+          </span>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="playtest" class="section involve-section">
+
+
+    <!-- =====================================
+         PLAYTEST / GET INVOLVED
+    ====================================== -->
+
+    <section
+      id="playtest"
+      class="section involve-section"
+    >
+
       <div class="section-heading reveal">
-        <p class="eyebrow">ENTER THE TOWER</p>
-        <h2>Get Involved</h2>
-        <p>Choose how you want to be part of Breaking Point.</p>
+
+        <p class="eyebrow">
+          ENTER THE TOWER
+        </p>
+
+
+        <h2>
+          Get Involved
+        </h2>
+
+
+        <p>
+          Choose how you want to be part of
+          Breaking Point.
+        </p>
+
       </div>
 
-      <div class="interest-grid reveal" role="group" aria-label="Interest type">
-        <button class="interest-card active" data-type="Beta Testing">Beta Testing<span>Test builds and report problems.</span></button>
-        <button class="interest-card" data-type="Early Access">Early Access<span>Be among the first to play.</span></button>
-        <button class="interest-card" data-type="Collaboration">Collaboration<span>Help build Breaking Point.</span></button>
-        <button class="interest-card" data-type="Sponsorship">Sponsorship<span>Support development directly.</span></button>
-        <button class="interest-card" data-type="Press / Creator">Press / Creator<span>Coverage, content, or interviews.</span></button>
-        <button class="interest-card" data-type="General Inquiry">General Inquiry<span>Anything else.</span></button>
+
+
+      <div
+        class="interest-grid reveal"
+        role="group"
+        aria-label="Interest type"
+      >
+
+
+        <button
+          class="interest-card active"
+          data-type="Beta Testing"
+        >
+
+          Beta Testing
+
+          <span>
+            Test builds and report problems.
+          </span>
+
+        </button>
+
+
+
+        <button
+          class="interest-card"
+          data-type="Early Access"
+        >
+
+          Early Access
+
+          <span>
+            Be among the first to play.
+          </span>
+
+        </button>
+
+
+
+        <button
+          class="interest-card"
+          data-type="Collaboration"
+        >
+
+          Collaboration
+
+          <span>
+            Help build Breaking Point.
+          </span>
+
+        </button>
+
+
+
+        <button
+          class="interest-card"
+          data-type="Sponsorship"
+        >
+
+          Sponsorship
+
+          <span>
+            Support development directly.
+          </span>
+
+        </button>
+
+
+
+        <button
+          class="interest-card"
+          data-type="Press / Creator"
+        >
+
+          Press / Creator
+
+          <span>
+            Coverage, content, or interviews.
+          </span>
+
+        </button>
+
+
+
+        <button
+          class="interest-card"
+          data-type="General Inquiry"
+        >
+
+          General Inquiry
+
+          <span>
+            Anything else.
+          </span>
+
+        </button>
+
       </div>
 
-      <form class="contact-form reveal" name="breaking-point-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="breaking-point-interest" />
-        <input type="hidden" name="interest" id="interestField" value="Beta Testing" />
-        <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+
+      <!-- =====================================
+           NETLIFY FORM
+      ====================================== -->
+
+      <form
+        class="contact-form reveal"
+        name="breaking-point-interest"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+
+
+        <input
+          type="hidden"
+          name="form-name"
+          value="breaking-point-interest"
+        />
+
+
+        <input
+          type="hidden"
+          name="interest"
+          id="interestField"
+          value="Beta Testing"
+        />
+
+
+        <p class="hidden">
+
+          <label>
+
+            Don't fill this out:
+
+            <input name="bot-field" />
+
+          </label>
+
+        </p>
+
+
 
         <div class="form-title">
-          <span>SELECTED PATH</span>
-          <h3 id="formHeading">Apply for Beta Testing</h3>
+
+          <span>
+            SELECTED PATH
+          </span>
+
+
+          <h3 id="formHeading">
+            Apply for Beta Testing
+          </h3>
+
         </div>
+
+
 
         <div class="form-grid">
+
+
           <label>
+
             Name
-            <input type="text" name="name" required autocomplete="name" />
+
+            <input
+              type="text"
+              name="name"
+              required
+              autocomplete="name"
+            />
+
           </label>
+
+
+
           <label>
+
             Email
-            <input type="email" name="email" required autocomplete="email" />
+
+            <input
+              type="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+
           </label>
+
+
+
           <label id="platformWrap">
+
             Platform
+
             <select name="platform">
-              <option value="Android">Android</option>
-              <option value="PC">PC</option>
-              <option value="Both">Both</option>
+
+              <option value="Android">
+                Android
+              </option>
+
+              <option value="PC">
+                PC
+              </option>
+
+              <option value="Both">
+                Both
+              </option>
+
             </select>
+
           </label>
+
+
+
           <label class="full-width">
+
             Message
-            <textarea name="message" rows="5" placeholder="Tell us a little about why you're interested."></textarea>
+
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Tell us a little about why you're interested."
+            ></textarea>
+
           </label>
+
         </div>
 
-        <button class="btn primary submit-btn" type="submit">Send Request</button>
-        <p class="form-note">This form is ready for Netlify Forms when the site is deployed.</p>
+
+
+        <button
+          class="btn primary submit-btn"
+          type="submit"
+        >
+          Send Request
+        </button>
+
+
+        <p class="form-note">
+          Your request will be sent directly
+          through the Breaking Point website.
+        </p>
+
       </form>
+
     </section>
+
+
   </main>
 
-  <aside class="climb-meter" aria-hidden="true">
-    <span class="climb-label top">TOP</span>
-    <div class="climb-track"><div class="climb-progress"></div><div class="climb-marker"></div></div>
-    <span class="climb-label bottom">BASE</span>
+
+
+  <!-- =====================================
+       CLIMB INDICATOR
+  ====================================== -->
+
+  <aside
+    class="climb-meter"
+    aria-hidden="true"
+  >
+
+    <span class="climb-label top">
+      TOP
+    </span>
+
+
+    <div class="climb-track">
+
+      <div class="climb-progress"></div>
+
+      <div class="climb-marker"></div>
+
+    </div>
+
+
+    <span class="climb-label bottom">
+      BASE
+    </span>
+
   </aside>
 
+
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
   <footer class="site-footer">
-    <div class="logo-placeholder small">LOGO</div>
-    <p>BREAKING POINT</p>
-    <span>A game by Sam Statix</span>
-    <small>© 2026 Breaking Point</small>
+
+
+    <img
+      src="assets/images/logo.jfif"
+      alt="Breaking Point logo"
+      class="footer-logo"
+    />
+
+
+    <p>
+      BREAKING POINT
+    </p>
+
+
+    <span>
+      A game by Sam Statix
+    </span>
+
+
+    <small>
+      © 2026 Breaking Point
+    </small>
+
+
   </footer>
 
+
+
   <script src="script.js"></script>
+
 </body>
+
 </html>

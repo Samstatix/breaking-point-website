@@ -1,1196 +1,175 @@
-:root {
-  --bg: #0b1117;
-  --bg-2: #101820;
-  --panel: #151e26;
-  --storm: #344550;
-  --text: #d8d6cf;
-  --muted: #91979b;
-  --ember: #c85f3d;
-  --warm: #e29a55;
-  --border: rgba(216, 214, 207, 0.16);
-  --header-h: 76px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Georgia, "Times New Roman", serif;
-  overflow-x: hidden;
-}
-
-body::selection {
-  background: var(--ember);
-  color: #fff;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-
 /* =========================================
-   EMBER CANVAS
+   REAL WEBSITE IMAGES
 ========================================= */
 
-#embers {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 4;
-  opacity: 0.65;
+.site-logo {
+  width: 44px;
+  height: 44px;
+
+  object-fit: contain;
+
+  border-radius: 4px;
 }
 
+.support-logo {
+  width: 110px;
+  height: 110px;
 
-/* =========================================
-   NAVIGATION
-========================================= */
-
-.site-header {
-  position: fixed;
-  inset: 0 0 auto 0;
-  height: var(--header-h);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 4vw;
-
-  z-index: 20;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(5, 9, 13, 0.86),
-    rgba(5, 9, 13, 0.18),
-    transparent
-  );
-
-  backdrop-filter: blur(3px);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  letter-spacing: 0.16em;
-  font-size: 12px;
-}
-
-.logo-placeholder {
-  display: grid;
-  place-items: center;
-
-  border: 1px solid rgba(255, 255, 255, 0.22);
-
-  color: rgba(255, 255, 255, 0.55);
-  background: rgba(255, 255, 255, 0.035);
-
-  letter-spacing: 0.12em;
-  font-family: Arial, sans-serif;
-}
-
-.logo-placeholder.small {
-  width: 42px;
-  height: 42px;
-  font-size: 8px;
-}
-
-.logo-placeholder.medium {
-  width: 96px;
-  height: 96px;
-  font-size: 10px;
-  margin-inline: auto;
-}
-
-.site-nav {
-  display: flex;
-  gap: 28px;
-
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-}
-
-.site-nav a {
-  opacity: 0.72;
-
-  transition:
-    opacity 0.25s,
-    color 0.25s;
-}
-
-.site-nav a:hover,
-.site-nav a.active {
-  opacity: 1;
-  color: var(--warm);
-}
-
-.menu-toggle {
-  display: none;
-
-  background: none;
-  border: 0;
-
-  color: var(--text);
-  font-size: 24px;
-
-  cursor: pointer;
-}
-
-
-/* =========================================
-   GENERAL SECTIONS
-========================================= */
-
-.section {
-  position: relative;
-
-  min-height: 720px;
-
-  padding: 120px 8vw;
-
-  overflow: hidden;
-}
-
-.dark-section {
-  background: var(--bg);
-}
-
-
-/* =========================================
-   HERO / MAIN TOWER
-========================================= */
-
-.hero {
-  min-height: 980px;
-
-  display: flex;
-  align-items: center;
-}
-
-
-/*
-   YOUR MAIN TOWER IMAGE IS HERE
-*/
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(5, 9, 13, 0.88) 0%,
-      rgba(5, 9, 13, 0.52) 35%,
-      rgba(5, 9, 13, 0.15) 68%,
-      rgba(5, 9, 13, 0.45) 100%
-    ),
-    url("assets/images/main-tower.jfif");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  transform: scale(1.04);
-
-  will-change: transform;
-}
-
-
-/*
-   Darkens the bottom of the image so that
-   it transitions naturally into the website.
-*/
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to top,
-      var(--bg) 0%,
-      rgba(11, 17, 23, 0.8) 5%,
-      transparent 35%
-    );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 6;
-
-  width: min(680px, 92%);
-}
-
-.eyebrow {
-  margin: 0 0 18px;
-
-  font:
-    700 11px/1.2 Arial,
-    sans-serif;
-
-  letter-spacing: 0.24em;
-
-  color: var(--warm);
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
-
-h1 {
-  font-size: clamp(72px, 10vw, 160px);
-  line-height: 0.78;
-  letter-spacing: -0.04em;
+  object-fit: contain;
 
   margin-bottom: 28px;
-
-  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-.hero-copy {
-  font-size: clamp(18px, 2vw, 28px);
+.footer-logo {
+  width: 54px;
+  height: 54px;
 
-  color: #b9bdbe;
-
-  max-width: 550px;
-
-  line-height: 1.4;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-
-  margin-top: 32px;
+  object-fit: contain;
 }
 
 
-/* =========================================
-   BUTTONS
-========================================= */
+/* Tower section image */
 
-.btn {
-  min-height: 48px;
-
-  padding: 0 22px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--border);
-
-  font:
-    700 12px/1 Arial,
-    sans-serif;
-
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-
-  transition:
-    transform 0.2s,
-    background 0.2s,
-    border-color 0.2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn.primary {
-  background: linear-gradient(
-    135deg,
-    #8f3928,
-    var(--ember)
-  );
-
-  color: #fff;
-
-  border-color: rgba(226, 154, 85, 0.42);
-}
-
-.btn.ghost {
-  background: rgba(10, 16, 22, 0.42);
-
-  backdrop-filter: blur(4px);
-}
-
-.btn.disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.scroll-hint {
-  position: absolute;
-
-  left: 8vw;
-  bottom: 40px;
-
-  z-index: 6;
-
-  font:
-    10px/1 Arial,
-    sans-serif;
-
-  letter-spacing: 0.22em;
-
-  color: rgba(255, 255, 255, 0.45);
-}
-
-
-/* =========================================
-   FOG
-========================================= */
-
-.fog {
-  position: absolute;
-
-  left: -20%;
-  bottom: 0;
-
-  width: 140%;
-  height: 170px;
-
-  z-index: 5;
-
-  opacity: 0.16;
-
-  filter: blur(22px);
-
-  background: radial-gradient(
-    ellipse at center,
-    rgba(190, 202, 207, 0.6),
-    rgba(190, 202, 207, 0) 62%
-  );
-
-  animation: drift 18s linear infinite alternate;
-}
-
-.fog-b {
-  bottom: 60px;
-
-  opacity: 0.09;
-
-  animation-duration: 25s;
-  animation-direction: alternate-reverse;
-}
-
-@keyframes drift {
-  from {
-    transform: translateX(-4%);
-  }
-
-  to {
-    transform: translateX(4%);
-  }
-}
-
-
-/* =========================================
-   GENERIC IMAGE PLACEHOLDERS
-========================================= */
-
-.section-media {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.03),
-      rgba(255, 255, 255, 0)
-    ),
-    repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.02) 0 2px,
-      transparent 2px 16px
-    ),
-    #18232c;
-}
-
-.image-placeholder {
-  display: grid;
-  place-items: center;
-
-  color: rgba(255, 255, 255, 0.32);
-
-  font:
-    12px/1.2 Arial,
-    sans-serif;
-
-  letter-spacing: 0.16em;
-
-  text-align: center;
-}
-
-
-/* =========================================
-   THE TOWER
-========================================= */
-
-.tower-section {
-  background: linear-gradient(
-    #0b1117,
-    #111820 60%,
-    #0b1117
-  );
-
-  display: grid;
-
-  grid-template-columns: 1.25fr 0.75fr;
-
-  gap: 7vw;
-
-  align-items: center;
-}
-
-.tower-section .section-media {
-  position: relative;
-
+.tower-image {
   min-height: 690px;
 
   border: 1px solid var(--border);
-}
 
-.tower-copy {
-  position: relative;
-  z-index: 2;
-}
-
-h2 {
-  font-size: clamp(46px, 6vw, 88px);
-
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-
-  margin-bottom: 30px;
-}
-
-.tower-lines {
-  margin-top: 52px;
-}
-
-.tower-lines p {
-  font-size: clamp(19px, 2vw, 30px);
-
-  color: #aeb4b6;
-
-  margin-bottom: 26px;
-}
-
-.tower-lines p:last-child {
-  color: var(--warm);
-}
-
-
-/* =========================================
-   SIGIL / TRANSITION SECTION
-========================================= */
-
-.sigil-break {
-  min-height: 800px;
-
-  display: grid;
-  place-items: center;
-
-  text-align: center;
-}
-
-.sigil-placeholder {
-  width: min(560px, 78vw);
-
-  aspect-ratio: 1;
-
-  border-radius: 50%;
-
-  border: 1px dashed rgba(255, 255, 255, 0.18);
-
-  display: grid;
-  place-items: center;
-
-  color: rgba(255, 255, 255, 0.28);
-
-  font:
-    11px Arial,
-    sans-serif;
-
-  letter-spacing: 0.14em;
-
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.04),
-    transparent 65%
-  );
-}
-
-.break-title {
-  margin-top: -150px;
+  overflow: hidden;
 
   position: relative;
-}
-
-.break-title span {
-  font:
-    10px Arial,
-    sans-serif;
-
-  letter-spacing: 0.22em;
-
-  color: var(--muted);
-}
-
-.break-title h2 {
-  margin-top: 12px;
-}
-
-
-/* =========================================
-   DEVELOPMENT
-========================================= */
-
-.development-section {
-  background: #10171d;
-}
-
-.section-heading {
-  max-width: 760px;
-
-  margin-bottom: 60px;
-}
-
-.section-heading > p:last-child {
-  color: #9da4a8;
-
-  font-size: 18px;
-}
-
-.dev-grid {
-  display: grid;
-
-  grid-template-columns: 1.3fr 0.7fr;
-
-  gap: 40px;
-}
-
-.dev-feature {
-  border: 1px solid var(--border);
-
-  background: #131c23;
-}
-
-.dev-image {
-  min-height: 420px;
-
-  background: #d7c8a5;
-
-  color: rgba(30, 30, 30, 0.5);
-}
-
-.dev-copy {
-  padding: 28px;
-}
-
-.status {
-  font:
-    700 10px Arial,
-    sans-serif;
-
-  letter-spacing: 0.18em;
-
-  color: var(--warm);
-}
-
-.dev-copy h3 {
-  font-size: 36px;
-
-  margin: 10px 0 12px;
-}
-
-.dev-copy p {
-  color: #969fa3;
-
-  line-height: 1.7;
-}
-
-.milestones {
-  border-top: 1px solid var(--border);
-}
-
-.milestone {
-  display: flex;
-  justify-content: space-between;
-
-  gap: 20px;
-
-  padding: 22px 0;
-
-  border-bottom: 1px solid var(--border);
-
-  font:
-    12px Arial,
-    sans-serif;
-
-  letter-spacing: 0.08em;
-}
-
-.milestone strong {
-  color: #7b858a;
-}
-
-.milestone.done strong {
-  color: #8ea98c;
-}
-
-.milestone.active strong {
-  color: var(--warm);
-}
-
-
-/* =========================================
-   SUPPORT
-========================================= */
-
-.support-section {
-  min-height: 700px;
-
-  display: grid;
-  place-items: center;
-
-  text-align: center;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(200, 95, 61, 0.08),
-      transparent 34%
-    ),
-    #090e13;
-}
-
-.support-inner {
-  max-width: 760px;
-}
-
-.support-inner h2 {
-  margin-top: 22px;
-}
-
-.support-inner > p:not(.eyebrow) {
-  color: #9da4a8;
-
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-.support-inner .btn {
-  margin-top: 20px;
-}
-
-.support-tags {
-  margin-top: 28px;
-
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  gap: 10px;
-}
-
-.support-tags span {
-  border: 1px solid var(--border);
-
-  padding: 8px 12px;
-
-  font:
-    10px Arial,
-    sans-serif;
-
-  letter-spacing: 0.14em;
-
-  color: #899095;
-}
-
-
-/* =========================================
-   GET INVOLVED / PLAYTEST
-========================================= */
-
-.involve-section {
-  background: linear-gradient(
-    #111820,
-    #0b1117
-  );
-}
-
-.interest-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 14px;
-
-  margin-bottom: 34px;
-}
-
-.interest-card {
-  min-height: 128px;
-
-  text-align: left;
-
-  padding: 20px;
-
-  border: 1px solid var(--border);
-
-  background: rgba(255, 255, 255, 0.02);
-
-  color: var(--text);
-
-  cursor: pointer;
-
-  font:
-    700 12px Arial,
-    sans-serif;
-
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-
-  transition:
-    background 0.2s,
-    border-color 0.2s,
-    transform 0.2s;
-}
-
-.interest-card span {
-  display: block;
-
-  margin-top: 10px;
-
-  color: #879095;
-
-  text-transform: none;
-  letter-spacing: 0;
-
-  font-weight: 400;
-
-  line-height: 1.4;
-}
-
-.interest-card:hover,
-.interest-card.active {
-  border-color: rgba(226, 154, 85, 0.56);
-
-  background: rgba(200, 95, 61, 0.09);
-
-  transform: translateY(-2px);
-}
-
-
-/* =========================================
-   CONTACT FORM
-========================================= */
-
-.contact-form {
-  border: 1px solid var(--border);
-
-  background: #111920;
-
-  padding: 34px;
-
-  max-width: 980px;
-}
-
-.form-title span {
-  font:
-    10px Arial,
-    sans-serif;
-
-  letter-spacing: 0.18em;
-
-  color: var(--muted);
-}
-
-.form-title h3 {
-  margin-top: 8px;
-
-  font-size: 34px;
-}
-
-.form-grid {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 20px;
-}
-
-.form-grid label {
-  display: flex;
-  flex-direction: column;
-
-  gap: 8px;
-
-  color: #9da4a8;
-
-  font:
-    11px Arial,
-    sans-serif;
-
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.form-grid input,
-.form-grid textarea,
-.form-grid select {
-  width: 100%;
-
-  border: 1px solid var(--border);
-
-  background: #0b1117;
-
-  color: var(--text);
-
-  padding: 14px;
-
-  outline: none;
-
-  text-transform: none;
-  letter-spacing: 0;
-
-  font-size: 16px;
-}
-
-.form-grid input:focus,
-.form-grid textarea:focus,
-.form-grid select:focus {
-  border-color: rgba(226, 154, 85, 0.65);
-}
-
-.full-width {
-  grid-column: 1 / -1;
-}
-
-.submit-btn {
-  margin-top: 22px;
-
-  cursor: pointer;
-}
-
-.form-note {
-  color: #727c81;
-
-  font:
-    11px Arial,
-    sans-serif;
-
-  margin: 14px 0 0;
-}
-
-.hidden {
-  display: none;
-}
-
-
-/* =========================================
-   TOWER CLIMB SCROLL INDICATOR
-========================================= */
-
-.climb-meter {
-  position: fixed;
-
-  right: 24px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  z-index: 12;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 8px;
-
-  opacity: 0.65;
-}
-
-.climb-track {
-  width: 1px;
-  height: 170px;
-
-  background: rgba(255, 255, 255, 0.16);
-
-  position: relative;
-}
-
-.climb-progress {
-  position: absolute;
-
-  inset: auto 0 0;
-
-  height: 0%;
-
-  background: var(--warm);
-}
-
-.climb-marker {
-  width: 9px;
-  height: 9px;
-
-  border: 1px solid var(--warm);
-
-  background: var(--bg);
-
-  transform: rotate(45deg);
-
-  position: absolute;
-
-  left: -4px;
-  bottom: 0%;
-}
-
-.climb-label {
-  font:
-    8px Arial,
-    sans-serif;
-
-  letter-spacing: 0.14em;
-
-  color: #838b8f;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.site-footer {
-  min-height: 320px;
-
-  padding: 70px 8vw;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  gap: 10px;
-
-  text-align: center;
-
-  border-top: 1px solid var(--border);
 
   background: #070b0f;
 }
 
-.site-footer p {
-  margin: 12px 0 0;
+.tower-image img {
+  width: 100%;
+  height: 100%;
 
-  letter-spacing: 0.18em;
-}
+  min-height: 690px;
 
-.site-footer span,
-.site-footer small {
-  color: #737c80;
-}
+  position: absolute;
 
+  inset: 0;
 
-/* =========================================
-   SCROLL REVEAL
-========================================= */
+  object-fit: cover;
 
-.reveal {
-  opacity: 0;
+  object-position: center;
 
-  transform: translateY(28px);
+  filter:
+    brightness(0.78)
+    contrast(1.08)
+    saturate(0.85);
 
   transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
+    transform 1.2s ease,
+    filter 0.8s ease;
 }
 
-.reveal.visible {
-  opacity: 1;
+.tower-image:hover img {
+  transform: scale(1.035);
 
-  transform: none;
+  filter:
+    brightness(0.9)
+    contrast(1.08)
+    saturate(0.95);
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/* Tower silhouette transition */
+
+.sigil-image {
+  width: min(620px, 85vw);
+
+  position: relative;
+
+  overflow: hidden;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 75%,
+      transparent 100%
+    );
+}
+
+.sigil-image img {
+  width: 100%;
+
+  display: block;
+
+  opacity: 0.68;
+
+  mix-blend-mode: screen;
+
+  filter:
+    grayscale(1)
+    contrast(1.2);
+}
+
+
+/* Training ground temporary placeholder */
+
+.training-placeholder {
+  min-height: 420px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(226, 154, 85, 0.12),
+      transparent 60%
+    ),
+    #121a21;
+
+  color: var(--text);
+
+  letter-spacing: 0.18em;
+
+  font-family: Arial, sans-serif;
+}
+
+.training-placeholder small {
+  color: var(--muted);
+
+  letter-spacing: 0.08em;
+}
+
+
+/* Mobile image adjustments */
 
 @media (max-width: 900px) {
 
-  .site-nav {
-    position: absolute;
-
-    top: var(--header-h);
-
-    right: 4vw;
-    left: 4vw;
-
-    display: none;
-    flex-direction: column;
-
-    gap: 0;
-
-    padding: 10px;
-
-    background: rgba(8, 12, 16, 0.96);
-
-    border: 1px solid var(--border);
-  }
-
-  .site-nav.open {
-    display: flex;
-  }
-
-  .site-nav a {
-    padding: 16px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .tower-section,
-  .dev-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tower-section .section-media {
+  .tower-image {
     min-height: 520px;
   }
 
-  .interest-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .climb-meter {
-    display: none;
-  }
-
-  .section {
-    padding-inline: 6vw;
+  .tower-image img {
+    min-height: 520px;
   }
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 600px) {
 
-  .brand span {
-    display: none;
+  .site-logo {
+    width: 38px;
+    height: 38px;
   }
 
-  .hero {
-    min-height: 760px;
+  .tower-image {
+    min-height: 450px;
   }
 
-  .hero-bg {
-    /*
-       Keeps the tower visible when the
-       landscape image is cropped on phones.
-    */
-
-    background-position: center center;
+  .tower-image img {
+    min-height: 450px;
   }
 
-  .section {
-    min-height: auto;
-
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  h1 {
-    font-size: clamp(58px, 20vw, 92px);
-  }
-
-  h2 {
-    font-size: 48px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .interest-grid,
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .full-width {
-    grid-column: auto;
-  }
-
-  .contact-form {
-    padding: 22px;
-  }
-
-  .sigil-break {
-    min-height: 640px;
-  }
-
-  .break-title {
-    margin-top: -90px;
-  }
-}
-
-
-/* =========================================
-   ACCESSIBILITY
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-
-    transition-duration: 0.001ms !important;
-  }
-
-  .reveal {
-    opacity: 1;
-
-    transform: none;
-  }
-
-  #embers {
-    display: none;
-  }
 }
