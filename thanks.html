@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Request Received — Breaking Point</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+
+      background:
+        linear-gradient(
+          rgba(5, 9, 13, 0.72),
+          rgba(5, 9, 13, 0.94)
+        ),
+        url("assets/images/main-tower.jfif");
+
+      background-size: cover;
+      background-position: center;
+
+      color: #d8d6cf;
+
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .success-box {
+      width: min(620px, 100%);
+
+      text-align: center;
+
+      padding: 60px 35px;
+
+      background: rgba(11, 17, 23, 0.88);
+
+      border: 1px solid rgba(216, 214, 207, 0.18);
+
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+
+      object-fit: contain;
+
+      margin-bottom: 28px;
+    }
+
+    .small-title {
+      color: #e29a55;
+
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+
+      letter-spacing: 0.24em;
+    }
+
+    h1 {
+      margin: 18px 0;
+
+      font-size: clamp(42px, 7vw, 72px);
+
+      line-height: 0.95;
+    }
+
+    p {
+      max-width: 470px;
+
+      margin: 0 auto 32px;
+
+      color: #a8afb2;
+
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    a {
+      min-height: 48px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 24px;
+
+      background: linear-gradient(
+        135deg,
+        #8f3928,
+        #c85f3d
+      );
+
+      border: 1px solid rgba(226, 154, 85, 0.45);
+
+      color: white;
+
+      text-decoration: none;
+
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+
+      letter-spacing: 0.14em;
+    }
+
+    a:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="success-box">
+
+    <img
+      src="assets/images/logo.jfif"
+      alt="Breaking Point"
+      class="logo"
+    >
+
+    <div class="small-title">
+      MESSAGE RECEIVED
+    </div>
+
+    <h1>
+      Your request has entered the Tower.
+    </h1>
+
+    <p>
+      Thank you for your interest in Breaking Point.
+      Your submission has been received and will be reviewed.
+    </p>
+
+    <a href="/">
+      RETURN TO BREAKING POINT
+    </a>
+
+  </main>
+
+</body>
+
+</html>
