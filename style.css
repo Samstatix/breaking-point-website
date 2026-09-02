@@ -173,3 +173,67 @@
   }
 
 }
+
+/* =========================================
+   EMERGENCY VISIBILITY FIX
+========================================= */
+
+.site-header {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.hero-content,
+.hero-bg,
+.hero-overlay,
+.scroll-hint,
+.tower-copy,
+.tower-image,
+.sigil-image,
+.break-title,
+.section-heading,
+.dev-feature,
+.milestones,
+.support-inner,
+.interest-grid,
+.contact-form {
+  visibility: visible !important;
+}
+
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.hero-bg {
+  display: block !important;
+  opacity: 1 !important;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 9, 13, 0.7) 0%,
+      rgba(5, 9, 13, 0.25) 45%,
+      rgba(5, 9, 13, 0.15) 75%
+    ),
+    url("assets/images/main-tower.jfif") !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.hero-content {
+  display: block !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+}
+
+.site-header {
+  z-index: 100 !important;
+}
+
+#embers {
+  z-index: 3 !important;
+}
